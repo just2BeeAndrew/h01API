@@ -1,4 +1,4 @@
-import {DBType} from '../types/db.types'
+import {DBType,Resolution} from '../types/db.types'
 import * as string_decoder from "node:string_decoder";
 import any = jasmine.any;
 
@@ -13,18 +13,17 @@ export const db: DBType = { // создаём базу данных (пока э
         minAgeRestriction: null,
         createdAt: '12.12.2012',
         publicationDate: '13.12.2012',
-        availableResolution: null,
-    }]
-    // some: []
+        availableResolution: [Resolution.P144],
+    }],
 }
 // функция для быстрой очистки/заполнения базы данных для тестов
-// export const setDB = (dataset?: Partial<DBType>) => {
-//     if (!dataset) { // если в функцию ничего не передано - то очищаем базу данных
-//         db.videos = []
-//         return
-//     }
-//
-//     // если что-то передано - то заменяем старые значения новыми
-//     db.videos = dataset.videos || db.videos
-//     // db.some = dataset.some || db.some
-// }
+ export const setDB = (dataset?: Partial<DBType>) => {
+     if (!dataset) { // если в функцию ничего не передано - то очищаем базу данных
+         db.videos.length = 0
+         return
+     }
+
+     // если что-то передано - то заменяем старые значения новыми
+     db.videos = dataset.videos || db.videos
+     // db.some = dataset.some || db.some
+ }
