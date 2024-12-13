@@ -6,7 +6,7 @@ export const db: DBType = { // создаём базу данных (пока э
         title: 'Video1',
         author: 'Author1',
         canBeDownloaded: false,
-        minAgeRestriction: null,
+        minAgeRestriction: 16,
         createdAt: '12.12.2012',
         publicationDate: '13.12.2012',
         availableResolution: [Resolution.P144],
