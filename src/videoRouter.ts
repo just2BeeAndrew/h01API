@@ -14,6 +14,7 @@ export const videoRouter = Router();
 export const videoController = {
     deleteAllVideos: (req: Request, res: Response) => {
         db.videos.length = 0
+        res.status(204)
     },
 
     getVideo: (req: Request, res: Response) => {

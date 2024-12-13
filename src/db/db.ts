@@ -27,5 +27,4 @@ export const setDB = (dataset?: Partial<DBType>) => {
 export const addDays = (Day: Date, addDay: number) => {
     Day.setDate(Day.getDate() + addDay)
     return Day
-
 }
