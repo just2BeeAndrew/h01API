@@ -1,6 +1,6 @@
 export enum Resolution {
-    'P144' = 'P144',
-    'P240' = 'P240',
+    "P144" = "P144",
+    "P240" = "P240",
     'P360' = 'P360',
     'P480' = 'P480',
     'P720' = 'P720',
@@ -10,13 +10,13 @@ export enum Resolution {
 }
 export type VideoDbType = {
     id: number
-    title: string
-    author: string
+    title: string,
+    author: string,
     canBeDownloaded: boolean | false,
     minAgeRestriction: number,
     createdAt: string
     publicationDate: string,
-    availableResolution: Resolution [],
+    availableResolutions: Resolution [],
 }
 
 

@@ -1,11 +1,11 @@
 export const errorResponse = (
-    errorsArray: Array<{field: string, message: string}>
+    errorsArray: Array<{message: string, field: string }>
 ) => {
     let error = {
-        errorsMessage: [] as Array<{field: string, message: string}>,
+        errorsMessages: [] as Array<{message: string, field: string}>,
     }
     errorsArray.forEach(err => {
-        error.errorsMessage.push(err)
+        error.errorsMessages.push(err)
     })
     return error
 

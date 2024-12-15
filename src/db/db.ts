@@ -9,7 +9,7 @@ export const db: DBType = { // создаём базу данных (пока э
         minAgeRestriction: 16,
         createdAt: '12.12.2012',
         publicationDate: '13.12.2012',
-        availableResolution: [Resolution.P144],
+        availableResolutions: [Resolution.P144],
     }],
 }
 // функция для быстрой очистки/заполнения базы данных для тестов
